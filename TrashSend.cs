@@ -8,7 +8,9 @@ public class TrashSend : MonoBehaviour, IDropHandler
     //This is put into the Trash or the Send objects/images
     public bool trash; //if it the trash or send
     public GameObject email; // the email interface
-    public GameObject playerHealth, checkEmail, score;
+    public GameObject playerHealth, //health lists parent object with the script
+    checkEmail, //Button which you drag to trash or send
+    score; //js the score text
     CanvasGroup canvasGroup;
     public void OnDrop(PointerEventData eventData)
     {
