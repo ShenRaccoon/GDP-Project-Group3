@@ -69,9 +69,6 @@ public class TrashSend : MonoBehaviour, IDropHandler
                            }
                        }
                    } */
-                
-                
-                
             }
         }
     }
