@@ -11,6 +11,7 @@ public class CheckEmail : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
     Vector3 initial;
+    public Vector3 resetPos;
     public bool droppedOnSlot, // If button dropped on anything
         gotVirus; // for email
 
@@ -18,11 +19,11 @@ public class CheckEmail : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,
     {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
-        initial = transform.position;
+        ResetPos();
     }
     private void Start()
     {
-        initial = transform.position;
+        ResetPos();
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -52,5 +53,11 @@ public class CheckEmail : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,
         Debug.Log("start drag");
         canvasGroup.blocksRaycasts = false;
         eventData.pointerDrag.GetComponent<CheckEmail>().droppedOnSlot = false;
+    }
+
+    public void ResetPos()
+    {
+        transform.localPosition = resetPos;
+        initial = transform.position;
     }
 }
