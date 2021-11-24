@@ -37,6 +37,41 @@ public class TrashSend : MonoBehaviour, IDropHandler
                 email.SetActive(false);
                 Debug.Log("WWRONGGGGG STOOPID");
                 playerHealth.GetComponent<PlayerHealth>().LoseHealth();
+                
+                /* public GameObject[] health; // LoseHealth() script
+                   int lives = 3;
+
+                   void Start()
+                   {
+                       lives = health.Length;
+                   }
+
+                   public void LoseHealth()
+                   {
+                       lives -= 1;
+                       for(int i = 0; i < lives; i++)
+                       {
+                           if (lives < 1)
+                           {
+                               Destroy(health[0].gameObject);
+                           }
+                           if (lives < 2)
+                           {
+                               Destroy(health[1].gameObject);
+                           }
+                           if (lives < 3)
+                           {
+                               Destroy(health[2].gameObject);
+                           }
+                           if (lives <= 0)
+                           {
+                               Debug.Log("Shine");
+                           }
+                       }
+                   } */
+                
+                
+                
             }
         }
     }
